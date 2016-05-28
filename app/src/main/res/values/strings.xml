@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Weather Project</string>
+    <string name="todayTemperature">Temeperature</string>
+    <string name="conditions">Conditions</string>
+    <string name="wind">Wind</string>
+    <string name="sunrise">sunrise</string>
+    <string name="sunset">sunset</string>
+    <string name="local">Localisation</string>
+    <string name="date">Date</string>
+    <string name="location">Location</string>
+</resources>

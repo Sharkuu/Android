@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.olaf.weatherproject.Weather">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/todayWeatherIcon"
+        android:src="@drawable/icon_na"
+        android:layout_alignEnd="@+id/todayTemperature"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/todayTemperature" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/todayTemperature"
+        android:id="@+id/todayTemperature"
+        android:layout_below="@+id/todayWeatherIcon"
+        android:layout_centerHorizontal="true"
+        android:typeface="serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/conditions"
+        android:id="@+id/conditions"
+        android:layout_below="@+id/todayTemperature"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/wind"
+        android:id="@+id/wind"
+        android:layout_below="@+id/conditions"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/sunrise"
+        android:id="@+id/sunrise"
+        android:layout_marginEnd="28dp"
+        android:layout_alignTop="@+id/sunset"
+        android:layout_alignEnd="@+id/sunriseIco" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/sunset"
+        android:id="@+id/sunset"
+        android:layout_alignBottom="@+id/sunsetIco"
+        android:layout_alignEnd="@+id/sunsetIco"
+        android:layout_marginEnd="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/location"
+        android:id="@+id/location"
+        android:layout_below="@+id/sunrise"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/date"
+        android:id="@+id/dateToday"
+        android:layout_below="@+id/location"
+        android:layout_alignStart="@+id/wind" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sunriseIco"
+        android:src="@drawable/icon_na"
+        android:layout_alignBottom="@+id/sunrise"
+        android:layout_toStartOf="@+id/todayTemperature" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sunsetIco"
+        android:src="@drawable/icon_na"
+        android:layout_alignTop="@+id/todayTemperature"
+        android:layout_toEndOf="@+id/todayTemperature" />
+
+</RelativeLayout>
