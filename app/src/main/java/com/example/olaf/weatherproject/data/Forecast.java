@@ -1,16 +1,18 @@
 package com.example.olaf.weatherproject.data;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
  * Created by Olaf on 2016-05-28.
  */
-public class Forecast implements JsonP {
+public class Forecast  {
 private int code;
     private String date;
     private int high;
     private int low;
     private String text;
+
 
     public String getDate() {
         return date;
@@ -32,9 +34,10 @@ private int code;
         return text;
     }
 
-    @Override
-    public void populate(JSONObject data){
+    public int getAvg(){return (getHigh()+getLow())/2;}
+    public void populate(JSONArray dat,int i){
         try{
+            JSONObject data = dat.getJSONObject(i);
         code = data.optInt("code");
         date = data.optString("date");
         high = data.getInt("high");

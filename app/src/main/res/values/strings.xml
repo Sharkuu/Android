@@ -8,4 +8,7 @@
     <string name="local">Localisation</string>
     <string name="date">Date</string>
     <string name="location">Location</string>
+    <string name="Temperature">Temperature</string>
+    <string name="title_activity_sett">Sett</string>
+    <string name="title_activity_about">About</string>
 </resources>

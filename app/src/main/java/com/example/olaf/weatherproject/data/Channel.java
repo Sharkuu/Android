@@ -13,6 +13,7 @@ public class Channel implements JsonP {
     private Astronomy astronomy;
     private Wind wind;
 
+
     public Astronomy getAstronomy() {
         return astronomy;
     }
@@ -43,6 +44,7 @@ public class Channel implements JsonP {
 
         item = new Item();
         item.populate(data.optJSONObject("item"));
+
         astronomy = new Astronomy();
         astronomy.populate(data.optJSONObject("astronomy"));
 

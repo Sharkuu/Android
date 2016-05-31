@@ -11,12 +11,12 @@
 
     <ImageView
         android:layout_width="wrap_content"
+        android:adjustViewBounds="true"
         android:layout_height="wrap_content"
         android:id="@+id/todayWeatherIcon"
         android:src="@drawable/icon_na"
-        android:layout_alignEnd="@+id/todayTemperature"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/todayTemperature" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,9 +52,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/sunrise"
         android:id="@+id/sunrise"
-        android:layout_marginEnd="28dp"
-        android:layout_alignTop="@+id/sunset"
-        android:layout_alignEnd="@+id/sunriseIco" />
+        android:layout_below="@+id/sunriseIco"
+        android:layout_alignStart="@+id/sunriseIco" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,9 +61,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/sunset"
         android:id="@+id/sunset"
-        android:layout_alignBottom="@+id/sunsetIco"
-        android:layout_alignEnd="@+id/sunsetIco"
-        android:layout_marginEnd="29dp" />
+        android:layout_above="@+id/location"
+        android:layout_alignEnd="@+id/sunsetIco" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,8 +70,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/location"
         android:id="@+id/location"
+
         android:layout_below="@+id/sunrise"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,23 +82,133 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/date"
         android:id="@+id/dateToday"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/location"
-        android:layout_alignStart="@+id/wind" />
+        android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:id="@+id/sunriseIco"
-        android:src="@drawable/icon_na"
-        android:layout_alignBottom="@+id/sunrise"
+        android:src="@drawable/sunrise"
+        android:layout_marginLeft="1dp"
+        android:layout_alignTop="@+id/sunsetIco"
         android:layout_toStartOf="@+id/todayTemperature" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:id="@+id/sunsetIco"
-        android:src="@drawable/icon_na"
-        android:layout_alignTop="@+id/todayTemperature"
+        android:src="@drawable/sunset"
+        android:layout_below="@+id/wind"
         android:layout_toEndOf="@+id/todayTemperature" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dateToday"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/wind">
+
+        <TextView
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Temperature"
+            android:id="@+id/nextDayTemp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_below="@+id/nextDayIco"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="151dp"
+            android:layout_height="55dp"
+            android:adjustViewBounds="true"
+            android:id="@+id/nextDayIco"
+            android:src="@drawable/icon_na"
+            android:layout_gravity="left|center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/conditions"
+            android:id="@+id/nextConditions"
+            android:layout_below="@+id/nextDayTemp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/date"
+            android:id="@+id/nextdate"
+            android:layout_below="@+id/nextConditions"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/GPS"
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/nextDayTemp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/dateToday"
+        android:layout_alignEnd="@+id/sunsetIco"
+        android:layout_below="@+id/dateToday">
+
+        <ImageView
+            android:layout_width="151dp"
+            android:layout_height="55dp"
+            android:adjustViewBounds="true"
+            android:id="@+id/nextnextDayIco"
+            android:src="@drawable/icon_na"
+            android:layout_gravity="left|center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/date"
+            android:id="@+id/nextnextDate"
+            android:layout_below="@+id/nextNextCondition"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/conditions"
+            android:id="@+id/nextNextCondition"
+            android:layout_below="@+id/nextNextTemp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Temperature"
+            android:id="@+id/nextNextTemp"
+            android:layout_gravity="left|center_vertical"
+            android:typeface="serif"
+            android:layout_below="@+id/nextnextDayIco"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
 </RelativeLayout>
