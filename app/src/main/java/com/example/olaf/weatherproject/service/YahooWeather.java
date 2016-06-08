@@ -25,7 +25,10 @@ public class YahooWeather {
 this.callback = callback;
 
     }
-    public String getLocation(){return location;}
+    public String getLocation(){
+        return location;
+    }
+
     public void refreashWeather( String location){
         this.location = location;
         new AsyncTask<String,Void,String>(){

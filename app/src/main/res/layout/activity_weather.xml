@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#000000"
     tools:context="com.example.olaf.weatherproject.Weather">
 
     <ImageView
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/todayTemperature"
+        android:textColor="#FFFFFF"
         android:id="@+id/todayTemperature"
         android:layout_below="@+id/todayWeatherIcon"
         android:layout_centerHorizontal="true"
@@ -33,36 +35,44 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/conditions"
+        android:textColor="#FFFFFF"
         android:id="@+id/conditions"
         android:layout_below="@+id/todayTemperature"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:typeface="serif" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/wind"
+        android:textColor="#FFFFFF"
         android:id="@+id/wind"
         android:layout_below="@+id/conditions"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:typeface="serif" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/sunrise"
+        android:textColor="#FFFFFF"
         android:id="@+id/sunrise"
         android:layout_below="@+id/sunriseIco"
-        android:layout_alignStart="@+id/sunriseIco" />
+        android:layout_alignStart="@+id/sunriseIco"
+        android:typeface="serif" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/sunset"
+        android:textColor="#FFFFFF"
         android:id="@+id/sunset"
         android:layout_above="@+id/location"
-        android:layout_alignEnd="@+id/sunsetIco" />
+        android:layout_alignEnd="@+id/sunsetIco"
+        android:typeface="serif" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,10 +80,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/location"
         android:id="@+id/location"
-
+        android:textColor="#FFFFFF"
         android:layout_below="@+id/sunrise"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:typeface="serif" />
 
 
     <TextView
@@ -82,14 +93,17 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/date"
         android:id="@+id/dateToday"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/location"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:typeface="serif" />
 
     <ImageView
         android:adjustViewBounds="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:textColor="#FFFFFF"
         android:id="@+id/sunriseIco"
         android:src="@drawable/sunrise"
         android:layout_marginLeft="1dp"
@@ -100,6 +114,7 @@
         android:adjustViewBounds="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:textColor="#FFFFFF"
         android:id="@+id/sunsetIco"
         android:src="@drawable/sunset"
         android:layout_below="@+id/wind"
@@ -117,16 +132,19 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/Temperature"
+            android:textColor="#FFFFFF"
             android:id="@+id/nextDayTemp"
             android:layout_gravity="left|center_vertical"
             android:layout_below="@+id/nextDayIco"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:typeface="serif" />
 
         <ImageView
             android:layout_width="151dp"
             android:layout_height="55dp"
             android:adjustViewBounds="true"
             android:id="@+id/nextDayIco"
+            android:textColor="#FFFFFF"
             android:src="@drawable/icon_na"
             android:layout_gravity="left|center_vertical"
             android:layout_centerVertical="true"
@@ -137,9 +155,11 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/conditions"
+            android:textColor="#FFFFFF"
             android:id="@+id/nextConditions"
             android:layout_below="@+id/nextDayTemp"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:typeface="serif" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -147,12 +167,15 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/date"
             android:id="@+id/nextdate"
+            android:textColor="#FFFFFF"
             android:layout_below="@+id/nextConditions"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:typeface="serif" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"
             android:id="@+id/GPS"
@@ -176,6 +199,7 @@
             android:layout_height="55dp"
             android:adjustViewBounds="true"
             android:id="@+id/nextnextDayIco"
+            android:textColor="#FFFFFF"
             android:src="@drawable/icon_na"
             android:layout_gravity="left|center_vertical"
             android:layout_centerVertical="true"
@@ -184,26 +208,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/date"
             android:id="@+id/nextnextDate"
             android:layout_below="@+id/nextNextCondition"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:typeface="serif" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/conditions"
+            android:textColor="#FFFFFF"
             android:id="@+id/nextNextCondition"
             android:layout_below="@+id/nextNextTemp"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:typeface="serif" />
 
         <TextView
             android:layout_width="93dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/Temperature"
+            android:textColor="#FFFFFF"
             android:id="@+id/nextNextTemp"
             android:layout_gravity="left|center_vertical"
             android:typeface="serif"

@@ -12,6 +12,7 @@ import android.location.Geocoder;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.media.Image;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -91,8 +92,8 @@ public class Weather extends AppCompatActivity implements WeatherCallback,Locati
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.settings:
-                Intent intent = new Intent(Weather.this, Sett.class);
-                startActivity(intent);
+                Intent viewIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivity(viewIntent);
                 return true;
             case R.id.about:
                 Intent intent2 = new Intent(Weather.this, About.class);
@@ -129,25 +130,18 @@ public class Weather extends AppCompatActivity implements WeatherCallback,Locati
         dialog = new ProgressDialog(this);
         dialog.setMessage("Loading...");
         dialog.show();
-
-
-        //////
+        //////Geo
         criteria = new Criteria();
         locationManager = (LocationManager)getSystemService(LOCATION_SERVICE);
-            bestsupp = GPS_PROVIDER;
-
+        bestsupp = GPS_PROVIDER;
         lc = locationManager.getLastKnownLocation(bestsupp);
-        //info.setText(lc);
         if(lc == null){
             bestsupp = NETWORK_PROVIDER;
-
             lc = locationManager.getLastKnownLocation(bestsupp);
-
         }
         Geocoder geoCoder = new Geocoder(getBaseContext(), Locale.getDefault());
         try {
             List<Address> addresses = geoCoder.getFromLocation(lc.getLatitude(), lc.getLongitude(), 1);
-           // info.setText(addresses.get(0).getLocality()+ " "+addresses.get(0).getCountryName());
            service.refreashWeather(addresses.get(0).getLocality()+","+ addresses.get(0).getCountryName());
         }
         catch (IOException e1) {
@@ -188,10 +182,6 @@ public class Weather extends AppCompatActivity implements WeatherCallback,Locati
         nextNextDayTemp.setText(channel.getItem().getForecast2().getAvg()+""+(char) 0x00B0+channel.getUnits().getTemp());
         nextNextDayCond.setText(channel.getItem().getForecast2().getText());
         nextNextDayDate.setText(channel.getItem().getForecast2().getDate());
-
-    }
-    public void GPS(){
-
 
     }
     @Override

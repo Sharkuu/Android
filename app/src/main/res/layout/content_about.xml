@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.olaf.weatherproject.About"
-    tools:showIn="@layout/activity_about">
+    tools:showIn="@layout/activity_about"
+    android:background="#000000">
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,6 +19,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="         Weather app \n\nCreated by Olaf Schab\n\n           June 2016"
         android:id="@+id/info"
+        android:textColor="#FFFFFF"
+        android:typeface="serif"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp" />

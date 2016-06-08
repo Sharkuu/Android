@@ -2,11 +2,60 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        jar="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
         revision="23.0.3"
-        sha1="7d8a9fa58b535df81e9245be1b43ef8894c91850">
-        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_a5cf5807c9811271dc315adf8a27dd0502b1e853.jar" />
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.4.0_e22bdcb9c898456fd9fe1739e7dc0cf670928029.jar" />
+    </item>
+    <item
+        jar="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\release\com.android.support-design-23.4.0_ca1e687d7f1dd1b9192bc0b783422ea59c762054.jar" />
+    </item>
+    <item
+        jar="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-23.4.0_dc96d5cafbbce5b397b085b70af3d7e1020a227d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-23.4.0_5a63d4962c356787e581bfb743c9892ac9c38b20.jar" />
+    </item>
+    <item
+        jar="C:\Users\Olaf\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\release\support-annotations-23.4.0_66d08e971506f4b1672f574b9cd3f891fd33a630.jar" />
+    </item>
+    <item
+        jar="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\release\internal_impl-23.4.0_d9e26615b672c720ee6e281b4c37a3c340272029.jar" />
+    </item>
+    <item
+        jar="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-23.4.0_d24eaf4fc869fb209460badade5143057b26c8df.jar" />
+    </item>
+    <item
+        jar="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Olaf\Desktop\android\WeatherProject\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.4.0_ba0e81147239c9a8d3ef5802573471db2f61866a.jar" />
     </item>
 
 </items>
